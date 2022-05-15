@@ -18,8 +18,9 @@ class GuileCommonmark < Formula
 
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "guile" unless build.stable?
-  depends_on "guile@2" if build.stable?
+  depends_on "guile@2"
+  # depends_on "guile" unless build.stable?
+  # depends_on "guile@2" if build.stable?
   depends_on "libffi"
   depends_on "libtool"
   depends_on "libunistring"
