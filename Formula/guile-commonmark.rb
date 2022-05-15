@@ -29,7 +29,6 @@ class GuileCommonmark < Formula
   def install
     ENV.deparallelize
     ENV['GUILE_AUTO_COMPILE'] = '0'
-    ENV['GUILE_LOAD_PATH'] = '/opt/homebrew//share/guile/site/2.2'
 
     system "autoreconf", "-vif" unless build.stable?
     system "./configure", *std_configure_args, "--disable-silent-rules"
